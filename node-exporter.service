@@ -1,0 +1,11 @@
+[Unit]
+Description=Node exporter service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/node-exporter/node-exporter
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
